@@ -11,7 +11,7 @@ sketchybar --bar "${bar[@]}" --default "${default[@]}"
 source $ITEM_DIR/disk.sh
 source $ITEM_DIR/ram.sh
 source $ITEM_DIR/cpu.sh
-#source $ITEM_DIR/network_rates.sh
+source $ITEM_DIR/network_rates.sh
 source $ITEM_DIR/media.sh
 source $ITEM_DIR/front_app.sh
 
