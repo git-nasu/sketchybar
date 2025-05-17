@@ -24,7 +24,7 @@ default=(
 
   label.font.family="$FONT"
   label.font.style="Semibold"
-  label.font.size=13.0
+  label.font.size=14.0
   label.color=$LABEL_COLOR
   label.highlight_color=$GREY
 
