@@ -23,6 +23,7 @@ source $ITEM_DIR/battery.sh
 source $ITEM_DIR/network.sh
 source $ITEM_DIR/sound.sh
 source $ITEM_DIR/network_rates.sh
+source $ITEM_DIR/apple.sh
 #source $ITEM_DIR/brew.sh
 
 sketchybar --hotload on

@@ -2,9 +2,9 @@
 
 INTERFACE="en0"
 
-read initial_rx initial_tx < <(netstat -ibn | awk -v iface="$INTERFACE" '$1 == iface && $3 == "<Link#12>" {print $7, $10}')
+read initial_rx initial_tx < <(netstat -ibn | awk -v iface="$INTERFACE" '$1 == iface && ($3 == "<Link#12>" || $3 == "<Link#11>")  {print $7, $10}')
 sleep 1
-read final_rx final_tx < <(netstat -ibn | awk -v iface="$INTERFACE" '$1 == iface && $3 == "<Link#12>" {print $7, $10}')
+read final_rx final_tx < <(netstat -ibn | awk -v iface="$INTERFACE" '$1 == iface && ($3 == "<Link#12>" || $3 == "<Link#11>")  {print $7, $10}')
 
 DOWN=$((final_rx - initial_rx)) # Bytes per second
 UP=$((final_tx - initial_tx))   # Bytes per second
